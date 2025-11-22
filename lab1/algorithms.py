@@ -13,21 +13,19 @@ def two_pointers(arr1, arr2):
     return False
 
 def bin_search_two_arrs(arr1, arr2):
-    n, m =  len(arr1), len(arr2)
     if len(arr1)>len(arr2):
         arr1, arr2 = arr2, arr1
-        n, m = m, n
+    n, m =  len(arr1), len(arr2)
     for el in arr1:
         l, r = 0, m-1
         if bin_search(el, arr2, l, r): return True
     return False
 
 def exp_search(arr1, arr2):
-    n, m =  len(arr1), len(arr2)
     p = 0
-    if n>m:
-        arr2, arr1 = arr1, arr2
-        n, m = m, n
+    if len(arr1)>len(arr2):
+        arr1, arr2 = arr2, arr1
+    n, m =  len(arr1), len(arr2)
     for el in arr1:
         k = 1
         if p>=m: break
@@ -72,4 +70,5 @@ def center_bin(arr1, l1, r1, arr2, l2, r2):
 
 def start(a, b):
     return center_bin(a, 0, len(a)-1, b, 0, len(b)-1)
+
 
