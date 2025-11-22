@@ -1,8 +1,6 @@
 import numpy as np
 import time
 import random
-import matplotlib.pyplot as plt
-import lab
 
 def generate_dif_chet(size):
     arr1 = np.random.choice(np.arange(0, 2*size, 2), size=size)
@@ -10,13 +8,6 @@ def generate_dif_chet(size):
     arr1.sort()
     arr2.sort()
     return arr1, arr2
-
-# def generate_ravnomerno_odin(size):
-#     arr1 = np.random.randint(0, 2 * size, size=size)
-#     arr2 = np.random.choice(np.arange(0, 2 * size), size=size, replace=False)
-#     arr1.sort()
-#     arr2.sort()
-#     return arr1, arr2
 
 def generate_ravnomerno(size):
     arr1 = np.random.uniform(0, 10**5, size)
@@ -65,4 +56,5 @@ def generate_random(size):
     arr2 = np.random.randint(0, 10**9, size)
     arr1.sort()
     arr2.sort()  
+
     return arr1, arr2
