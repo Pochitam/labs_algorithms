@@ -1,8 +1,3 @@
-import random
-import time
-import numpy as np
-import matplotlib.pyplot as plt
-
 def two_pointers(arr1, arr2):
     n, m =  len(arr1), len(arr2)
     p1, p2 = 0, 0   
@@ -70,5 +65,6 @@ def center_bin(arr1, l1, r1, arr2, l2, r2):
 
 def start(a, b):
     return center_bin(a, 0, len(a)-1, b, 0, len(b)-1)
+
 
 
